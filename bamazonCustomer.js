@@ -96,7 +96,7 @@ function promptUserPurchase() {
 					})
 				} else {
 					//send message to user when the quantity the user wants is greater than what's available in stock
-					console.log('Sorry, this item is out of stock, your order can not be placed at this time.');
+					console.log('Insufficient quantity!');
 					console.log('Please decrease the quantity amount for your order or select a different product');
 					console.log("\n---------------------------------------------------------------------\n");
 
