@@ -12,3 +12,6 @@ CREATE TABLE products (
   stock_quantity INT,
   PRIMARY KEY (item_id)
 );
+
+
+select * from products;
