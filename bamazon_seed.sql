@@ -13,5 +13,12 @@ CREATE TABLE products (
   PRIMARY KEY (item_id)
 );
 
+create table departments (
+department_id int not null auto_increment,
+department_name varchar(45) null,
+over_head_costs INT,
+primary key (department_id)
+);
 
-select * from products;
+ALTER TABLE products
+ADD product_sales int;
