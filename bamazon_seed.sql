@@ -19,6 +19,3 @@ department_name varchar(45) null,
 over_head_costs INT,
 primary key (department_id)
 );
-
-ALTER TABLE products
-ADD product_sales int;

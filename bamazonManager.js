@@ -70,17 +70,18 @@ function displayInventory() {
 	connection.query(queryStr, function(err, res) {
 		if (err) throw err;
 
-		console.log('Current Inventory: ');
-		console.log('...................\n');
+	console.log("----------------------------------------------------");
+	console.log("Item Id | Product | Dept | Price | In Stock Quantity");
+	console.log("----------------------------------------------------");
 
 		var strOut = '';
 		for (var i = 0; i < res.length; i++) {
 			strOut = '';
-			strOut += 'Item ID: ' + res[i].item_id + ' | ';
-			strOut += 'Product Name: ' + res[i].product_name + ' | ';
-			strOut += 'Department: ' + res[i].department_name + ' | ';
-			strOut += 'Price: $' + res[i].price + ' | ';
-			strOut += 'Quantity: ' + res[i].stock_quantity + '\n';
+			strOut += res[i].item_id + ' | ';
+			strOut += res[i].product_name + ' | ';
+			strOut += res[i].department_name + ' | ';
+			strOut += res[i].price + ' | ';
+			strOut += + res[i].stock_quantity + '\n';
 
 			console.log(strOut);
 		}
@@ -102,16 +103,18 @@ function displayLowInventory() {
 		if (err) throw err;
 
 		console.log('Low Inventory Items (below 500): ');
-		console.log('................................\n');
+		console.log("----------------------------------------------------");
+		console.log("Item Id | Product | Dept | Price | In Stock Quantity");
+		console.log("----------------------------------------------------");
 
 		var inventoryCount = '';
 		for (var i = 0; i < data.length; i++) {
 			inventoryCount = '';
-			inventoryCount += 'Item ID: ' + data[i].item_id + ' | ';
-			inventoryCount += 'Product Name: ' + data[i].product_name + ' | ';
-			inventoryCount += 'Department: ' + data[i].department_name + ' | ';
-			inventoryCount += 'Price: $' + data[i].price + ' | ';
-			inventoryCount += 'Quantity: ' + data[i].stock_quantity + '\n';
+			inventoryCount += data[i].item_id + ' | ';
+			inventoryCount += data[i].product_name + ' | ';
+			inventoryCount += data[i].department_name + ' | ';
+			inventoryCount += data[i].price + ' | ';
+			inventoryCount += + data[i].stock_quantity + '\n';
 
 			console.log(inventoryCount);
 		}
